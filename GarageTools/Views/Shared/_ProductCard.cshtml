@@ -1,0 +1,14 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="container">
+<h1>@Model.Name</h1>
+<div>
+    <h2>@Model.Name</h2>
+    <h3>@Model.UnitPrice.ToString("c")</h3>
+
+    <a class="btn btn-primary" asp-controller="Product" asp-action="Details" asp-route-id="@Model.Id">Details</a>
+</div>
+</div>

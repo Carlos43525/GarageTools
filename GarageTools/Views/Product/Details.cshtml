@@ -1,0 +1,15 @@
+﻿@using System.Net
+@using System.Threading.Tasks
+@model Product
+
+<div class="thumbnail">
+    <div class="caption-full">
+        <img src="~/Images/@Model.Images" style="max-width:25%;"/>
+        <h1 class="pull-right">@Model.Name</h1>
+        <h3 class="pull-right">@Model.UnitPrice</h3>
+        <div class="button">
+            <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-productId="@Model.Id">
+            Add to cart</a>
+        </div>
+    </div>
+</div>
