@@ -1,3 +1,11 @@
 ﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .splide__hero {
+        width: 100vw;
+        height: 32rem;
+        object-fit: cover;
+    }
+}

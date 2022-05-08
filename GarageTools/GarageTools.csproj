@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
 	  <!--<NpmLastInstall>node_modules/.last-install</NpmLastInstall>-->
-	  <!--<Nullable>enable</Nullable>-->
+	  <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\Images\Placeholders\" />
     <Folder Include="wwwroot\Images\Products\Makita\" />
     <Folder Include="wwwroot\Images\Products\Milwaukee\" />
     <Folder Include="wwwroot\Images\Products\Ryobi\" />
