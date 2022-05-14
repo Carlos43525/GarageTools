@@ -8,4 +8,8 @@
         height: 32rem;
         object-fit: cover;
     }
+
+    .w-136 {
+        width: 34rem;
+    }
 }
