@@ -9,7 +9,25 @@
         object-fit: cover;
     }
 
+    .search-bar-width {
+        max-width: 50rem;
+    }
+
     .w-136 {
         width: 34rem;
     }
+
+    .splide__slide__thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .splide__slide__thumbnail {
+        opacity: 0.6;
+    }
+
+        .splide__slide__thumbnail.is-active {
+            opacity: 1;
+        }
 }
