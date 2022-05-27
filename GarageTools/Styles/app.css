@@ -17,6 +17,10 @@
         width: 34rem;
     }
 
+    .w-152 {
+        width: 38rem; 
+    }
+
     .splide__slide__thumbnail img {
         width: 100%;
         height: 100%;

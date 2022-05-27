@@ -1,8 +1,8 @@
-﻿const sideBarClose = document.getElementById('sideBarClose');
-const sideBarOpen = document.getElementById('sideBarOpen');
+﻿const sideBarOpen = document.getElementById('sideBarOpen');
+const sideBarClose = document.getElementById('sideBarClose');
 const sideBar = document.getElementById('sideBar');
 
-// Mobile nav/sidebar open close handlers
+// Mobile nav/sidebar open close handler
 sideBarOpen.addEventListener('click', () => {
     sideBar.classList.toggle('-translate-x-full');
     sideBar.classList.add('translate-x-0');
@@ -12,8 +12,6 @@ sideBarClose.addEventListener('click', () => {
     sideBar.classList.remove('translate-x-0');
     sideBar.classList.toggle('-translate-x-full');
 })
-
-
 
 // Index.cshtml carousel for main banner
 document.addEventListener('DOMContentLoaded', function () {

@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
     content: [
         './Views/**/*.cshtml',
@@ -5,6 +7,10 @@ module.exports = {
         './Pages/**/*.cshtml'
     ],
     theme: {
+        screens: {
+            'xs': '380px', 
+            ...defaultTheme.screens,
+        },
         extend: {
             colors: {
                 'site-primary': '#1a1a1a', // gray

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-	  <!--<NpmLastInstall>node_modules/.last-install</NpmLastInstall>-->
+	  <NpmLastInstall>node_modules/.last-install</NpmLastInstall>
 	  <Nullable>enable</Nullable>
   </PropertyGroup>
 
@@ -37,7 +37,14 @@
     <Folder Include="wwwroot\Images\Products\DeWalt\" />
   </ItemGroup>
 
-	<!--<Target Name="CheckForNpm" BeforeTargets="NpmInstall">
+  <ItemGroup>
+    <Content Update="wwwroot\js\products.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+	<Target Name="CheckForNpm" BeforeTargets="NpmInstall">
 		<Exec Command="npm -v" ContinueOnError="true">
 			<Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
 		</Exec>
@@ -47,7 +54,7 @@
 	<Target Name="NpmInstall" BeforeTargets="BuildCSS" Inputs="package.json" Outputs="$(NpmLastInstall)">
 		<Exec Command="npm install" />
 		<Touch Files="$(NpmLastInstall)" AlwaysCreate="true" />
-	</Target> -->
+	</Target> 
 
 	<Target Name="BuildCSS" BeforeTargets="Compile">
 		<Exec Command="npm run buildcss:dev" Condition=" '$(Configuration)' == 'Debug' " />
