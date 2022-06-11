@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
-    .splide__hero {
-        width: 100vw;
-        height: 32rem;
-        object-fit: cover;
-    }
+
+    /* Swiper sliders/carousel styles */
+
+    /* Product details thumbnail and gallery */
 
     .search-bar-width {
         max-width: 50rem;
@@ -18,20 +17,27 @@
     }
 
     .w-152 {
-        width: 38rem; 
+        width: 38rem;
     }
 
-    .splide__slide__thumbnail img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .thumbnails {
+        display: flex;
+        margin: 1rem auto 0;
+        padding: 0;
+        justify-content: center;
     }
 
-    .splide__slide__thumbnail {
-        opacity: 0.6;
+    .thumbnail {
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        list-style: none;
+        margin: 0 0.2rem;
+        cursor: pointer;
     }
 
-        .splide__slide__thumbnail.is-active {
-            opacity: 1;
+        .thumbnail img {
+            width: 100%;
+            height: auto;
         }
 }

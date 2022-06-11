@@ -1,0 +1,116 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Power Tools";
+}
+
+
+
+<section class="relative bg-white">
+    <h1 class="flex justify-center my-4 text-center font-bold">Power Tools</h1>
+
+    <div class="max-w-7xl mx-auto justify-between md:flex">
+        <!-- Col 1 side bar-->
+        <aside id="sortFilterBarHide" class="">
+            <!-- Side menu components -->
+            <div id="sortFilterBar" class="transition ease-in-out duration-400 transform -translate-x-full fixed inset-0 flex z-40
+                                           md:transition-none md:transform-none md:static md:z-auto">
+                <!-- Side menu sort & filter close button -->
+                <div class="relative max-w-2xl w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto md:w-64 md:shadow-none sm:max-w-sm">
+                    <div class="px-4 py-5 flex justify-between">
+                        <p class="font-medium text-gray-900">Sort & Filter</p>
+                        <button id="sortFilterClose" type="button"
+                                class="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400 md:hidden">
+                            <!-- Heroicon name: outline/x -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="" class="border-t border-gray-200 py-6 px-4 space-y-6 space-y-10">
+                        <!-- Categories side menu nav list-->
+                        <fieldset>
+                            <legend class="font-medium text-gray-900">Sort By</legend>
+                            <ul class="mt-6 flex flex-col space-y-6" role="radiogroup">
+                                <li class="flow-root">
+                                    <input type="radio" id="sort-by-popular" value="Popular" name="sortOption" class="" />
+                                    <label for="sort-by-popular" class="ml-4 text-gray-700">Popular</label>
+                                </li>
+                                <li class="flow-root">
+                                    <input type="radio" id="sort-by-price-low-high" value="price-low-high" name="sortOption" class="" />
+                                    <label for="sort-by-price-low-high" class="ml-4 text-gray-700">Price Low to High</label>
+                                </li>
+                                <li class="flow-root">
+                                    <input type="radio" id="sort-by-price-high-low" value="price-high-low" name="sortOption" class="" />
+                                    <label for="sort-by-price-high-low" class="ml-4 text-gray-700">Price High to Low</label>
+                                </li>
+                                <li class="flow-root">
+                                    <input type="radio" id="highest-rated" value="highest-rated" name="sortOption" class="" />
+                                    <label for="highest-rated" class="ml-4 text-gray-700">Highest Rated</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <div class="border-t border-gray-200 pt-6">
+                            <fieldset>
+                                <legend class="font-medium text-gray-900">Brands</legend>
+                                <ul class="mt-6 flex flex-col space-y-6" role="group">
+                                    <li class="flex items-center justify-between">
+                                        <div>
+                                            <input type="checkbox" id="sort-dewalt" value="dewalt" name="sortBrand" class="" />
+                                            <label for="sort-dewalt" class="ml-4 text-gray-700">DeWalt</label>
+                                        </div>
+                                        <p class="text-gray-500">(0)</p>
+                                    </li>
+                                    <li class="flex items-center justify-between">
+                                        <div>
+                                            <input type="checkbox" id="sort-makita" value="makita" name="sortBrand" class="" />
+                                            <label for="sort-makita" class="ml-4 text-gray-700">Makita</label>
+                                        </div>
+                                        <p class="text-gray-500">(0)</p>
+                                    </li>
+                                    <li class="flex items-center justify-between">
+                                        <div>
+                                            <input type="checkbox" id="sort-milwaukee" value="milwaukee" name="sortBrand" class="" />
+                                            <label for="sort-milwaukee" class="ml-4 text-gray-700">Milwaukee</label>
+                                        </div>
+                                        <p class="text-gray-500">(0)</p>
+                                    </li>
+                                    <li class="flex items-center justify-between">
+                                        <div>
+                                            <input type="checkbox" id="sort-ryobi" value="ryobi" name="sortBrand" class="" />
+                                            <label for="sort-ryobi" class="ml-4 text-gray-700">Ryobi</label>
+                                        </div>
+                                        <p class="text-gray-500">(0)</p>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Col 2 products-->
+        <div class="max-w-4xl lg:max-w-5xl">
+            <div class="flex justify-center items-center">
+                <button id="sortFilterOpen" class="md:hidden max-w-xs inline-block px-6 py-2.5 border-2 border-site-secondary text-site-secondary
+                                    font-medium text-md leading-tight uppercase shadow-md hover:opacity-50 transition
+                                    duration-150 ease-in-out">
+                    Sort & Filter
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 gap-y-10 gap-x-6 justify-items-center p-4 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-16">
+                <!-- Cards -->
+                <partial name="_ProductCardPartial" />
+                <partial name="_ProductCardPartial" />
+                <partial name="_ProductCardPartial" />
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<script src="~/js/products.js"></script>

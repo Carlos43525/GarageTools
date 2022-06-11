@@ -18,7 +18,7 @@ namespace GarageTools.Controllers
         {
             _context = context;
         }
-        public IActionResult PowerTools()
+        public IActionResult Products()
         {
             //return View(_context.Products.ToList());
             IEnumerable<Product> products;
@@ -31,7 +31,12 @@ namespace GarageTools.Controllers
             });
         }
 
-        //public IActionResult Details(int id)
+        public IActionResult ProductDetails()
+        {
+            return View();
+        }
+
+        //public IActionResult ProductDetails(int id)
         //{
         //    var product = _context.Products.FirstOrDefault(x => x.Id == id);
         //    // TODO

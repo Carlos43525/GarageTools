@@ -13,25 +13,25 @@ sideBarClose.addEventListener('click', () => {
     sideBar.classList.toggle('-translate-x-full');
 })
 
-// Index.cshtml carousel for main banner
-document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#image-carousel', {
-        type: 'loop',
-        autoplay: true,
-        interval: 10000,
-        speed: 400,
-        pagination: false,
-    }).mount();
-});
+//// Index.cshtml carousel for main banner
+//document.addEventListener('DOMContentLoaded', function () {
+//    new Splide('#image-carousel', {
+//        type: 'loop',
+//        autoplay: true,
+//        interval: 10000,
+//        speed: 400,
+//        pagination: false,
+//    }).mount();
+//});
 
-// Index.cshtml carousel for "Popular Products" section
-document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#thumbnail-carousel', {
-        fixedWidth: 250,
-        fixedHeight: 250,
-        gap: 10,
-        rewind: true,
-        pagination: false,
-        focus: 'center',
-    }).mount();
-});
+//// Index.cshtml carousel for "Popular Products" section
+//document.addEventListener('DOMContentLoaded', function () {
+//    new Splide('#thumbnail-carousel', {
+//        fixedWidth: 250,
+//        fixedHeight: 250,
+//        gap: 10,
+//        rewind: true,
+//        pagination: false,
+//        focus: 'center',
+//    }).mount();
+//});
